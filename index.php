@@ -2,6 +2,16 @@
 
 include "conn.php";
 
+echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="index_style.css"
+</head>
+<body>';
+
 // Define questions and answers
 $questions = [
     [
@@ -50,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Quiz</title>
+    <title></title>
 </head>
 <body>
     <h1>PHP Quiz</h1>
