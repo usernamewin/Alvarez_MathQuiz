@@ -5,6 +5,8 @@ include "conn.php";
 $quiz = "select * from results";
 $result = $conn->query($quiz);
 
+echo "<h2>Leadboard</h2>";
+
 if ($result->num_rows > 0) {
     echo "<table border=1 cellspacing=0 cellpadding=0>
             <tr>
