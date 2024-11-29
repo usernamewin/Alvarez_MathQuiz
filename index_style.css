@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgreen;
+    background-color: rgb(228, 245, 232);
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -30,11 +30,14 @@ fieldset {
 legend {
     color: green;
     margin: 0;
+    font-weight: bold;
 }
 
 label {
     color: green;
     margin-top: 5px;
+    display: block;
+    font-weight: bold;
 }
 
 input[type="radio"] {
@@ -59,6 +62,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: darkgreen;
+    font-weight: 16px;
 }
 
 h2 {

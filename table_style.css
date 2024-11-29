@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgreen;
+    background-color: rgb(228, 245, 232);
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ th, td {
 
 th {
     background-color: green;
-    color: lightgreen;
+    color: rgb(228, 245, 232);
 }
 
 td {
@@ -44,4 +44,5 @@ a {
 a:hover {
     color: darkgreen;
     text-decoration: underline;
+    font-weight: bold;
 }

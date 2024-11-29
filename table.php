@@ -10,12 +10,11 @@ echo '<!DOCTYPE html>
     <title>Quiz Leadboard</title>
     <link rel="stylesheet" type="text/css" href="table_style.css"
 </head>
-<body>';
+<body>
+<h2>LEADBOARD</h2>';
 
-$quiz = "select * from results";
+$quiz = "select * from results order by score desc";
 $result = $conn->query($quiz);
-
-echo "<h2>Leadboard</h2>";
 
 if ($result->num_rows > 0) {
     echo "<table border=1 cellspacing=0 cellpadding=0>
