@@ -12,11 +12,13 @@ if ($result->num_rows > 0) {
             <tr>
                 <th>Nickname</th>
                 <th>Score</th>
+                <th>Retake Quiz</th>
             </tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>" . $row["nickname"] . "</td>
                 <td>" . $row["score"] . "</td>
+                <td><a href='retake.php?nickname=" . urlencode($row["nickname"]) . "'>Retake</a></td>
             </tr>";
     }
     echo "</table>";
