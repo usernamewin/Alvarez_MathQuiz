@@ -7,7 +7,7 @@ echo '<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Math Quiz</title>
     <link rel="stylesheet" type="text/css" href="index_style.css"
 </head>
 <body>';
@@ -15,18 +15,28 @@ echo '<!DOCTYPE html>
 // Define questions and answers
 $questions = [
     [
-        "question" => "What does PHP stand for?",
-        "options" => ["Personal Home Page", "Private Home Page", "PHP: Hypertext Preprocessor", "Public Hypertext Preprocessor"],
+        "question" => "What is the value of 8 + 12 * 2?",
+        "options" => ["40", "32", "28", "24"],
         "answer" => 2
     ],
     [
-        "question" => "Which symbol is used to access a property of an object in PHP?",
-        "options" => [".", "->", "::", "#"],
+        "question" => "Simplify 3x - 5x - 2.",
+        "options" => ["8x", "8x - 2", "3x - 3", "5x - 2"],
         "answer" => 1
     ],
     [
-        "question" => "Which function is used to include a file in PHP?",
-        "options" => ["include()", "require()", "import()", "load()"],
+        "question" => "If y = 3x + 2, what is y when x = 4?",
+        "options" => ["12", "14", "10", "20"],
+        "answer" => 1
+    ],
+    [
+        "question" => "What is the square root of 121?",
+        "options" => ["22", "19", "18", "11"],
+        "answer" => 3
+    ],
+    [
+        "question" => "Which of the following is a prime number?",
+        "options" => ["23", "15", "21", "27"],
         "answer" => 0
     ]
 ];
@@ -63,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title></title>
 </head>
 <body>
-    <h1>PHP Quiz</h1>
+    <h1>Math Quiz</h1>
     <form method="post" action="">
         <label for="nickname">Nickname: </label>
         <input type="text" id="nickname" name="nickname" required><br><br>
