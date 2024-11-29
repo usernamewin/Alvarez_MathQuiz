@@ -26,11 +26,19 @@ $score = 0;
 
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nickname = ($_POST["nickname"]);
     foreach ($questions as $index => $question) {
         if (isset($_POST["question$index"]) && $_POST["question$index"] == $question['answer']) {
             $score++;
         }
     }
+
+    $sql = $conn->prepare("insert into results (nickname, score) 
+            values (?, ?)");
+    $sql->bind_param("si", $nickname, $score);
+    $sql->execute();
+    $sql->close();
+
     echo "<h2>Your Score: $score/" . count($questions) . "</h2>";
     echo '<a href="index.php">Try Again</a>';
     exit;
@@ -47,6 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <h1>PHP Quiz</h1>
     <form method="post" action="">
+        <label for="nickname">Nickname: </label>
+        <input type="text" id="nickname" name="nickname" required><br><br>
         <?php foreach ($questions as $index => $question): ?>
             <fieldset>
                 <legend><?php echo $question['question']; ?></legend>
