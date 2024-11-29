@@ -1,4 +1,7 @@
 <?php
+
+include "conn.php";
+
 // Define questions and answers
 $questions = [
     [
